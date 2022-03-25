@@ -1,2 +1,6 @@
 https://github.com/prisma/prisma/issues/8266
 replica set mongodb
+
+IMPORTANT FOR STYLUS OR PENTAB EVENT READ BELOW 
+FOR MORE INFORMATION 
+https://javascript.info/pointer-events 
