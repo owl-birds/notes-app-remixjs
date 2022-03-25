@@ -1,0 +1,13 @@
+.canvas-wrapper {
+  display: grid;
+  justify-items: center;
+}
+.canvas-box {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  touch-action: none;
+}
+.canvas {
+  background-color: #fff;
+}

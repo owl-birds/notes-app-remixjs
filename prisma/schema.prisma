@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// MONGO ATLAS
+// generator client {
+//   provider        = "prisma-client-js"
+//   previewFeatures = ["mongoDb"]
+// }
+
+// datasource db {
+//   provider = "mongodb"
+//   url      = env("DATABASE_URL")
+// }
+
+// SQLITE
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// model for the picts notes
+model Pict{
+  // id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  id  String  @id @default(uuid()) // primary key ::: and making a format for id with uuid()
+  imageSource String
+  // postId String @db.ObjectId
+  postId String 
+  post Post @relation(fields:[postId], references:[id], onDelete: Cascade)
+}
+model Text{
+  // id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  id  String  @id @default(uuid()) // primary key ::: and making a format for id with uuid()
+  content String
+  // postId String @db.ObjectId
+  postId String 
+  post Post @relation(fields:[postId], references:[id], onDelete: Cascade)
+}
+model Post{
+  // id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  id  String  @id @default(uuid()) // primary key ::: and making a format for id with uuid()
+  title String
+  topic Topic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  // topicId String @db.ObjectId
+  topicId String 
+  // contents String[]
+  // imageSources String[]
+  texts Text[]
+  picts Pict[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Topic{
+  // id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  id  String  @id @default(uuid()) // primary key ::: and making a format for id with uuid()
+  title String
+  posts Post[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime @updatedAt
+}

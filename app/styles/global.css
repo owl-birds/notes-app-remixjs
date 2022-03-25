@@ -1,0 +1,27 @@
+body,
+nav,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section,
+main {
+  padding: 0;
+  margin: 0;
+}
+/* FONT */
+/* /FONT */
+/* @font-face {
+  font-family: "Montserrat-medium";
+  src: local("Montserrat-medium"),
+    url("./fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+} */
+body {
+  background-color: rgb(39, 38, 38);
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Montserrat-medium"; */
+}

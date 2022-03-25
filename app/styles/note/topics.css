@@ -1,0 +1,70 @@
+.topics-wrapper {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+.topics-title {
+  font-size: 3rem;
+}
+.topics-list {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+.topic-link {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.topics-title-link-wrapper {
+  min-height: 50px;
+  width: 50%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid rgb(114, 114, 114);
+  border-radius: 10px;
+}
+.topics-title-link-wrapper:hover {
+  background-color: rgb(114, 114, 114);
+  cursor: pointer;
+}
+/* .topics-title-link {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+} */
+
+/* ADD NEW TOPIC*/
+.topics-add-outer-wrapper {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.topics-add-inside-wrapper {
+  width: 50%;
+  display: grid;
+}
+.btn-add-topic {
+  justify-self: right;
+  width: 50px;
+  height: 50px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(39, 38, 38);
+  border: 1px solid rgb(114, 114, 114);
+  border-radius: 10px;
+}
+.btn-add-topic:hover {
+  background-color: rgb(114, 114, 114);
+  cursor: pointer;
+}
