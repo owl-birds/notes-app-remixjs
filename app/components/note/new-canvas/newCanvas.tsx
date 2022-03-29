@@ -1,6 +1,9 @@
 // REACT
 import { useState, useRef, useEffect } from "react";
 
+// types
+// import type React from "react";
+
 const NewCanvas = () => {
   // STATE
   const [isDrawing, setIsDrawing] = useState(false);

@@ -6,6 +6,7 @@
 }
 .topics-title {
   font-size: 3rem;
+  text-align: center;
 }
 .topics-list {
   display: grid;

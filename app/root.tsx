@@ -25,8 +25,8 @@ import imageStyles from "./styles/note/image.css";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: globalStyles },
   { rel: "stylesheet", href: navStyles },
-  { rel: "stylesheet", href: topicsStyles },
   { rel: "stylesheet", href: postsStyles },
+  { rel: "stylesheet", href: topicsStyles },
   { rel: "stylesheet", href: imageStyles },
   { rel: "stylesheet", href: canvasStyles },
   { rel: "stylesheet", href: textStyles },
