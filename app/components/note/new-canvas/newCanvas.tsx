@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 
 // types
-// import type React from "react";
+// import type { PointerEventHandler } from "react";
 
 const NewCanvas = () => {
   // STATE
@@ -10,15 +10,15 @@ const NewCanvas = () => {
   // const [isPen, setIsPen] = useState(false);
   const [dataUrl, setDataUrl] = useState("");
   // REF
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<CanvasRenderingContext2D>(null);
   const contextRef = useRef(null);
   // USE EFFECT
   useEffect(() => {
     console.log("USE EFFECT");
     const canvas: any = canvasRef.current;
-    canvas.width = 700 * 2;
+    canvas.width = 800 * 2;
     canvas.height = 350 * 2;
-    canvas.style.width = `${700}px`;
+    canvas.style.width = `${800}px`;
     canvas.style.height = `${350}px`;
 
     const context: any = canvas.getContext("2d");
